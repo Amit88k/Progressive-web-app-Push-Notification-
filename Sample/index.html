@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+    <title>Push Messaging &amp; Notifications</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-title" content="Push Messaging and Notifications Sample">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="../images/apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- Include manifest file in the page -->
+    <link rel="manifest" href="manifest.json">
+
+      <script src="sw.js"></script>
+
+
+
+</head>
+<body>
+    <h1>Push Messaging &amp; Notifications</h1>
+
+    <p>
+        <button class="js-push-button" disabled>
+            Enable Push Messages
+        </button>
+    </p>
+
+    <br />
+    <br />
+
+    <h2>CURL Command to Send Push</h2>
+    <div class="js-curl-command"></div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDZYEfhTj9QcPHPUBxaIJlVq2Qwh5a24ac",
+    authDomain: "sample-147f9.firebaseapp.com",
+    databaseURL: "https://sample-147f9.firebaseio.com",
+    projectId: "sample-147f9",
+    storageBucket: "sample-147f9.appspot.com",
+    messagingSenderId: "1072277191011"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+
+
+<script>
+
+    if ('serviceWorker' in navigator)
+    {
+      window.addEventListener('load', function()
+      {
+        navigator.serviceWorker.register('./sw.js')
+        .then(function(registration)
+        {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err)
+        {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+
+/*
+navigator.serviceWorker.ready.then(
+  function(swRegistration) {
+    return swRegistration.sync.register('Amit Khandelwal');
+  }
+);
+
+self.addEventListener('sync',
+function(event){
+  if(event.tag === 'Amit Khandelwal'){
+    event.waitUntil(console.log('Yes, it is done'));
+  }
+});
+*/
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-app.js"></script>
+
+    <script src="config.js"></script>
+    <script src="demo.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+[debug] [2017-06-02T10:06:38.533Z] ----------------------------------------------------------------------
+[debug] [2017-06-02T10:06:38.537Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-06-02T10:06:38.538Z] CLI Version:  3.9.1
+[debug] [2017-06-02T10:06:38.538Z] Platform:     darwin
+[debug] [2017-06-02T10:06:38.538Z] Node Version: v6.10.3
+[debug] [2017-06-02T10:06:38.539Z] Time:         Fri Jun 02 2017 15:36:38 GMT+0530 (IST)
+[debug] [2017-06-02T10:06:38.539Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-02T10:06:38.603Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-02T10:06:38.604Z] > authorizing via signed-in user
+[debug] [2017-06-02T10:06:38.607Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/sample-d2e8d  
+ Fri Jun 02 2017 15:36:38 GMT+0530 (IST)
+[debug] [2017-06-02T10:06:41.530Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-02T10:06:41.531Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/sample-d2e8d/tokens  
+ Fri Jun 02 2017 15:36:41 GMT+0530 (IST)
+[debug] [2017-06-02T10:06:43.948Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/retention'...
+[info] 
+[debug] [2017-06-02T10:06:43.952Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/sample-d2e8d  
+ Fri Jun 02 2017 15:36:43 GMT+0530 (IST)
+[debug] [2017-06-02T10:06:45.803Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-02T10:06:45.804Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/355217410840/clients/_:getWebAppConfig  
+ Fri Jun 02 2017 15:36:45 GMT+0530 (IST)
+[debug] [2017-06-02T10:06:46.837Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-02T10:06:47.001Z] TypeError: Cannot read property 'public' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.
